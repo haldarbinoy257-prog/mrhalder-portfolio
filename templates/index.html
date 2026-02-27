@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binoy Haldar Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  <img id="lightbox-img">
+</div>
+<body>
+    <div class="scroll-progress"></div>
+<nav class="navbar">
+  <div class="nav-logo">Binoy.dev</div>
+
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" class="nav-link active">About</a></li>
+    <li><a href="#connect" class="nav-link">Connect</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#explore" class="nav-link">Explore</a></li>
+  </ul>
+</nav>
+
+<!-- ===== FLOATING BUBBLES ===== -->
+<div class="bubbles">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="reveal">
+<section id="skills" class="reveal">
+<section id="projects" class="reveal">
+<section id="explore" class="reveal">
+  <div class="glass-card">
+
+    <div class="photo-wrap">
+        <h3 class="typing-text">
+  I'm <span id="typing"></span>
+</h3>
+      <img src="{{ url_for('static', filename='photo.jpg') }}" class="profile-pic">
+    </div>
+    <p class="profile-tagline">Future Data Analyst</p>
+
+    <h2 class="section-title">👨‍💻 About Me</h2>
+    <p class="typing-line">
+  <span id="typing-text"></span>
+</p>
+
+    <p>
+  Hi, I'm <strong>Binoy Haldar</strong>, a passionate B.Tech CSE (AI & ML)
+  student at Galgotias University with a strong focus on
+  <strong>Data Analytics and Data Visualization</strong>.
+  I enjoy solving real-world problems using data, algorithms, and
+  logical thinking. My core strength lies in breaking down complex
+  problems into simple, Proficient in problem-solving using Data Structures and Algorithms (DSA).
+  I am continuously improving my analytical thinking, building
+  data-driven projects, and preparing myself to become an
+  industry-ready Data Analyst.
+</p>
+
+    <p>
+      📍 <strong>Current Address:</strong> Greater Noida, Uttar Pradesh <br>
+      🏠 <strong>Permanent Address:</strong> Malda, West Bengal <br>
+      🎯 <strong>Career Goal:</strong> Data Analyst 
+    </p>
+
+    <p class="visitor-count">👀 Visitors: {{ visits }}</p>
+  </div>
+</section>
+<!-- ===== CONNECT ===== -->
+<section id="connect">
+  <div class="glass-card connect-card">
+
+    <h2 class="section-title">🚀 Connect With Me</h2>
+
+    <div class="resume-buttons">
+      <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn-primary" download>
+        📄 Download Resume
+      </a>
+
+      <a href="{{ url_for('static', filename='resume.pdf') }}" class="btn-outline" target="_blank">
+        👀 View Resume
+      </a>
+    </div>
+
+    <div class="social-links">
+
+      <a href="https://github.com/haldarbinoy257-prog" target="_blank" class="social-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+        <span>GitHub</span>
+      </a>
+
+      <a href="https://leetcode.com/" target="_blank" class="social-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png">
+        <span>LeetCode</span>
+      </a>
+
+      <a href="https://linkedin.com/" target="_blank" class="social-btn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+        <span>LinkedIn</span>
+      </a>
+
+      <a href="mailto:haldarbinoy257gmail.com" class="social-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+        <span>Email</span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="glass-card">
+    <h2 class="section-title">⚡ My Skills</h2>
+
+    <div class="skill">
+      <div class="skill-head"><span>HTML</span><span>90%</span></div>
+      <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-head"><span>CSS</span><span>85%</span></div>
+      <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-head"><span>JavaScript</span><span>75%</span></div>
+      <div class="progress"><div style="width:75%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-head"><span>Java</span><span>80%</span></div>
+      <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-head"><span>Python</span><span>85%</span></div>
+      <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-head"><span>SQL</span><span>78%</span></div>
+      <div class="progress"><div style="width:78%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-head"><span>C Programming</span><span>82%</span></div>
+      <div class="progress"><div style="width:82%"></div></div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== JOURNEY (CLICK TO VIEW) ===== -->
+<section id="timeline" class="reveal">
+  <div class="glass-card">
+
+    <div class="journey-header" onclick="toggleJourney()">
+      🎯 Explore My Journey
+      <span id="journeyArrow">▼</span>
+    </div>
+
+    <div id="journeyContent" class="journey-content">
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>🎓 Diploma in Computer Science & Technology</h3>
+            <p>Uluberia Government Polytechnic</p>
+            <span class="timeline-year">Completed</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>💻 B.Tech CSE (AI & ML)</h3>
+            <p>Galgotias University</p>
+            <span class="timeline-year">Pursuing</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>📊 Career Goal</h3>
+            <p>Aspiring Data Analyst </p>
+            <span class="timeline-year">Future</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ===== EXPERIENCE SECTION ===== -->
+<section id="experience" class="reveal">
+  <div class="glass-card">
+    <h2 class="section-title">💼 My Experience</h2>
+
+    <div class="exp-grid">
+
+      <!-- AI INTERN -->
+      <div class="exp-card">
+        <h3>🤖 Artificial Intelligence Intern</h3>
+        <p class="exp-company">CodeC Technology — 1 Month</p>
+        <p class="exp-text">
+          Worked on AI fundamentals, data preprocessing, and model understanding.
+          Gained hands-on exposure to Python-based machine learning workflows and
+          real-world problem-solving approaches.
+        </p>
+        <span class="exp-badge">Internship</span>
+      </div>
+
+      <!-- WEB INTERN -->
+      <div class="exp-card">
+        <h3>🌐 Web Development Intern</h3>
+        <p class="exp-company">CodeC Technology — 1 Month</p>
+        <p class="exp-text">
+          Developed responsive web pages using HTML, CSS, and JavaScript.
+          Strengthened front-end development skills, debugging ability,
+          and modern UI design practices.
+        </p>
+        <span class="exp-badge">Internship</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MY PROJECTS ===== -->
+<section id="projects">
+  <div class="glass-card">
+    <h2 class="section-title">💼 My Projects</h2>
+
+    <div class="project-grid">
+      {% for project in projects %}
+      <div class="project-card">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.desc }}</p>
+
+        <div class="project-tech">{{ project.tech }}</div>
+        <div class="project-features">{{ project.features }}</div>
+        <div class="project-status">{{ project.status }}</div>
+
+        <a href="{{ project.github }}" target="_blank" class="project-btn">
+          🔗 View Code
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+<!-- ===== EXPLORE MORE ===== -->
+<section id="explore">
+  <div class="glass-card">
+    <h2 class="section-title">🚀 Explore More</h2>
+
+    <div class="certificate-wrapper">
+      <div class="certificate-slider" id="certSlider">
+        {% for cert in certificates %}
+        <div class="certificate-card">
+          <a href="{{ url_for('static', filename='certificates/' + cert) }}" target="_blank">
+            <img
+              src="{{ url_for('static', filename='certificates/' + cert) }}"
+              alt="{{ cert }}">
+          </a>
+          <p class="cert-name">{{ cert }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+

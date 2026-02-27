@@ -1,0 +1,686 @@
+/* ================= BODY ================= */
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:white;
+  background:linear-gradient(135deg,#040a2a,#0b1f66,#142a8f,#1e3ca3);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ================= GLASS CARD ================= */
+.glass-card{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(18px);
+  border-radius:24px;
+  padding:30px;
+  margin:50px auto;
+  max-width:900px;
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.section-title{
+  text-align:center;
+  color:#00eaff;
+  font-size:28px;
+  margin-bottom:25px;
+  letter-spacing:.5px;
+}
+
+/* ================= PROFILE ================= */
+.photo-wrap{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  margin:30px 0;
+}
+
+.photo-wrap::before{
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background:conic-gradient(#00f5ff,#007bff,#00f5ff);
+  filter:blur(22px);
+  opacity:.55;
+  animation:rotateGlow 8s linear infinite;
+}
+
+.profile-pic{
+  position:relative;
+  width:155px;
+  height:155px;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #00f5ff;
+  z-index:1;
+  animation:floatProfile 5s ease-in-out infinite;
+}
+
+@keyframes floatProfile{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+
+@keyframes rotateGlow{
+  from{transform:rotate(0);}
+  to{transform:rotate(360deg);}
+}
+
+/* ================= SKILLS (PREMIUM) ================= */
+.skill{
+  margin:22px 0;
+}
+
+.skill-head{
+  display:flex;
+  justify-content:space-between;
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:8px;
+  opacity:.95;
+}
+
+.progress{
+  width:100%;
+  height:8px;
+  background:rgba(0,0,0,0.45);
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.progress div{
+  height:100%;
+  border-radius:20px;
+  background:linear-gradient(90deg,#00f5ff,#008cff);
+  box-shadow:
+    0 0 12px #00eaff,
+    0 0 22px rgba(0,140,255,.6);
+  animation:loadBar 1.6s ease forwards;
+}
+
+@keyframes loadBar{
+  from{width:0;}
+}
+
+/* ================= RESUME BUTTONS ================= */
+.resume-buttons{
+  text-align:center;
+  margin:25px 0 10px;
+}
+
+.btn-primary,
+.btn-outline{
+  display:inline-block;
+  padding:12px 24px;
+  margin:8px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.35s;
+}
+
+.btn-primary{
+  background:linear-gradient(90deg,#00f5ff,#007bff);
+  color:white;
+  box-shadow:0 0 18px rgba(0,245,255,.6);
+}
+
+.btn-primary:hover{
+  transform:translateY(-4px) scale(1.05);
+}
+
+.btn-outline{
+  border:2px solid #00f5ff;
+  color:#00f5ff;
+}
+
+.btn-outline:hover{
+  background:#00f5ff;
+  color:#001133;
+  transform:translateY(-4px);
+}
+
+/* ================= SOCIAL BUTTONS (PREMIUM) ================= */
+.social-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:22px;
+  margin-top:28px;
+}
+
+.social-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  color:white;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(0,245,255,0.25);
+  transition:all .35s ease;
+}
+
+.social-btn img{
+  width:24px;
+  height:24px;
+}
+
+.social-btn:hover{
+  transform:translateY(-6px) scale(1.08);
+  background:linear-gradient(135deg,#001a4d,#003b8f,#0057d9);
+  box-shadow:
+    0 0 20px #00f5ff,
+    0 0 40px rgba(0,140,255,.7);
+}
+
+/* ================= FLOATING BUBBLES ================= */
+.bubbles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.bubbles span{
+  position:absolute;
+  bottom:-120px;
+  width:18px;
+  height:18px;
+  background:#00f5ff33;
+  border-radius:50%;
+  animation:rise 20s infinite ease-in;
+}
+
+.bubbles span:nth-child(1){left:10%;}
+.bubbles span:nth-child(2){left:25%;animation-duration:24s;}
+.bubbles span:nth-child(3){left:40%;}
+.bubbles span:nth-child(4){left:60%;animation-duration:22s;}
+.bubbles span:nth-child(5){left:75%;}
+.bubbles span:nth-child(6){left:85%;animation-duration:26s;}
+.bubbles span:nth-child(7){left:50%;}
+.bubbles span:nth-child(8){left:15%;animation-duration:23s;}
+
+@keyframes rise{
+  0%{transform:translateY(0) scale(1);opacity:.6;}
+  100%{transform:translateY(-110vh) scale(1.9);opacity:0;}
+}
+.project-features{
+  font-size:13px;
+  opacity:.85;
+  margin:6px 0;
+  color:#9be7ff;
+}
+
+.project-status{
+  font-size:12px;
+  margin-bottom:10px;
+  color:#00f5ff;
+  font-weight:600;
+}
+/* ================= TAGLINE ================= */
+.profile-tagline{
+  text-align:center;
+  margin-top:-10px;
+  margin-bottom:15px;
+  font-size:15px;
+  letter-spacing:1px;
+  color:#7fe7ff;
+  font-weight:600;
+  text-shadow:0 0 10px rgba(0,245,255,.6);
+  animation:tagGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes tagGlow{
+  from{opacity:.7;}
+  to{opacity:1;}
+}
+
+/* ================= EXTRA DARK BUBBLES ================= */
+.bubbles span{
+  position:absolute;
+  bottom:-120px;
+  width:18px;
+  height:18px;
+  background:radial-gradient(circle,#00f5ff55,#007bff22);
+  border-radius:50%;
+  animation:rise 22s infinite ease-in;
+  box-shadow:0 0 12px rgba(0,245,255,.4);
+}
+
+/* more floating variation */
+.bubbles span:nth-child(odd){
+  animation-duration:26s;
+  width:14px;
+  height:14px;
+}
+
+.bubbles span:nth-child(even){
+  animation-duration:20s;
+  width:22px;
+  height:22px;
+}
+
+@keyframes rise{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:.6;
+  }
+  100%{
+    transform:translateY(-120vh) scale(2.2);
+    opacity:0;
+  }
+}
+/* ================= TYPING LINE ================= */
+.typing-line{
+  text-align:center;
+  font-size:16px;
+  color:#9be7ff;
+  margin-top:-5px;
+  margin-bottom:15px;
+  letter-spacing:.5px;
+}
+
+/* ================= SCROLL REVEAL ================= */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= MOUSE GLOW ================= */
+.cursor-glow{
+  position:fixed;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  pointer-events:none;
+  background:radial-gradient(circle,
+      rgba(0,245,255,.25),
+      rgba(0,123,255,.08),
+      transparent 70%);
+  transform:translate(-50%,-50%);
+  z-index:9999;
+  filter:blur(18px);
+}
+/* ================= CERTIFICATE SLIDER ================= */
+/* ================= CERT SLIDER PRO ================= */
+.certificate-wrapper{
+  overflow:hidden;
+  position:relative;
+}
+
+.certificate-slider{
+  display:flex;
+  gap:20px;
+  transition:transform .6s ease;
+  will-change:transform;
+}
+
+.certificate-card{
+  min-width:220px;
+  background:rgba(255,255,255,0.05);
+  border-radius:16px;
+  padding:12px;
+  text-align:center;
+  border:1px solid rgba(0,245,255,.2);
+  transition:.35s;
+}
+
+.certificate-card:hover{
+  transform:translateY(-6px) scale(1.05);
+  box-shadow:0 0 25px rgba(0,245,255,.35);
+}
+
+.certificate-card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.cert-name{
+  font-size:12px;
+  margin-top:6px;
+  opacity:.85;
+}
+#connect{
+  margin-top: -10px;
+}
+/* ================= NAVBAR ================= */
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:65px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  background:rgba(5,15,60,0.65);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(0,245,255,.15);
+  z-index:999;
+}
+
+.nav-logo{
+  font-weight:700;
+  font-size:20px;
+  color:#00f5ff;
+  letter-spacing:.5px;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  list-style:none;
+}
+
+.nav-link{
+  text-decoration:none;
+  color:#cfefff;
+  font-size:14px;
+  font-weight:500;
+  position:relative;
+  transition:.25s;
+}
+
+.nav-link:hover{
+  color:#00f5ff;
+}
+
+.nav-link.active{
+  color:#00f5ff;
+}
+
+.nav-link.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:2px;
+  background:#00f5ff;
+  box-shadow:0 0 10px #00f5ff;
+}
+
+/* body top spacing for fixed nav */
+body{
+  padding-top:75px;
+}
+/* ================= SCROLL PROGRESS ================= */
+.scroll-progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0%;
+  background:linear-gradient(90deg,#00f5ff,#007bff);
+  z-index:2000;
+  box-shadow:0 0 10px #00f5ff;
+}
+
+/* ================= NAVBAR GLOW ================= */
+.navbar.scrolled{
+  background:rgba(5,15,60,0.9);
+  box-shadow:0 0 25px rgba(0,245,255,.25);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+  color:#00f5ff;
+}
+
+/* ================= MOBILE MENU ================= */
+@media (max-width:768px){
+
+  .hamburger{
+    display:block;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:65px;
+    right:0;
+    width:220px;
+    background:rgba(5,15,60,0.95);
+    flex-direction:column;
+    gap:18px;
+    padding:20px;
+    transform:translateX(100%);
+    transition:.35s ease;
+    border-left:1px solid rgba(0,245,255,.2);
+  }
+
+  .nav-links.show{
+    transform:translateX(0);
+  }
+}
+
+/* ================= SECTION REVEAL PRO ================= */
+section{
+  opacity:1;
+  transform:translateY(0);
+  transition:all .9s cubic-bezier(.2,.65,.3,1);
+}
+
+section.reveal-start{
+  opacity:0;
+  transform:translateY(60px);
+}
+
+/* ===== SAFE SECTION DISPLAY ===== */
+section{
+  opacity:1 !important;
+  transform:none !important;
+}
+/* ================= TYPING TEXT ================= */
+.typing-text{
+  margin-top:10px;
+  font-weight:600;
+  color:#00f5ff;
+  letter-spacing:.5px;
+}
+
+#typing{
+  border-right:2px solid #00f5ff;
+  padding-right:4px;
+}
+/* ================= PROFILE PULSE ================= */
+.photo-wrap{
+  position:relative;
+  display:inline-block;
+}
+
+.photo-wrap::after{
+  content:"";
+  position:absolute;
+  inset:-12px;
+  border-radius:50%;
+  border:2px solid rgba(0,245,255,.5);
+  animation:pulseRing 2.5s infinite;
+}
+
+@keyframes pulseRing{
+  0%{transform:scale(1); opacity:.8;}
+  70%{transform:scale(1.25); opacity:0;}
+  100%{opacity:0;}
+}
+/* ================= LIGHTBOX ================= */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:3000;
+}
+
+.lightbox img{
+  max-width:90%;
+  max-height:85%;
+  border-radius:12px;
+  box-shadow:0 0 40px rgba(0,245,255,.3);
+}
+
+.close-lightbox{
+  position:absolute;
+  top:25px;
+  right:40px;
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+}
+/* ================= JOURNEY TOGGLE ================= */
+.journey-header{
+  cursor:pointer;
+  padding:14px 18px;
+  background:rgba(0,245,255,.08);
+  border:1px solid rgba(0,245,255,.25);
+  border-radius:12px;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:.3s;
+}
+
+.journey-header:hover{
+  background:rgba(0,245,255,.15);
+}
+
+.journey-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .5s ease;
+  margin-top:15px;
+}
+
+.journey-content.show{
+  max-height:800px;
+}
+
+#journeyArrow{
+  transition:.3s;
+}
+
+#journeyArrow.rotate{
+  transform:rotate(180deg);
+}
+
+/* timeline */
+.timeline{
+  margin-top:20px;
+  padding-left:25px;
+  border-left:2px solid rgba(0,245,255,.4);
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:-11px;
+  top:5px;
+  width:18px;
+  height:18px;
+  background:#00f5ff;
+  border-radius:50%;
+  box-shadow:0 0 12px #00f5ff;
+}
+/* ================= EXPERIENCE TEXT ================= */
+.exp-desc{
+  font-size:13px;
+  opacity:.85;
+  margin-top:6px;
+  line-height:1.5;
+}
+/* ================= EXPERIENCE SECTION ================= */
+.exp-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:25px;
+  margin-top:25px;
+}
+
+.exp-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(0,245,255,.25);
+  padding:20px;
+  border-radius:16px;
+  transition:.35s;
+  position:relative;
+}
+
+.exp-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(0,245,255,.35);
+}
+
+.exp-company{
+  font-size:13px;
+  opacity:.8;
+  margin:6px 0;
+}
+
+.exp-text{
+  font-size:13px;
+  line-height:1.5;
+  opacity:.9;
+}
+
+.exp-badge{
+  position:absolute;
+  top:12px;
+  right:12px;
+  font-size:11px;
+  padding:4px 10px;
+  border-radius:20px;
+  background:rgba(0,245,255,.15);
+  border:1px solid rgba(0,245,255,.4);
+}
+/* ================= LEETCODE ================= */
+.leetcode-box{
+  display:flex;
+  justify-content:center;
+  margin-top:25px;
+}
+
+.leetcode-img{
+  max-width:420px;
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 0 30px rgba(0,245,255,.25);
+  transition:.35s;
+}
+
+.leetcode-img:hover{
+  transform:scale(1.04);
+  box-shadow:0 0 45px rgba(0,245,255,.45);
+}
+
+.leetcode-note{
+  text-align:center;
+  font-size:13px;
+  opacity:.85;
+  margin-top:12px;
+}
