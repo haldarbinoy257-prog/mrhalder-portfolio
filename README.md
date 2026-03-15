@@ -2,7 +2,7 @@
 
 A modern, animated full-stack portfolio built with **Python Flask + HTML/CSS/JS**.
 
-🌐 Designed to showcase my journey toward becoming a **Data Analyst & Software Developer**.
+🌐 Designed to showcase my journey toward becoming a **Data Analyst **.
   follow this link to see mt website
 ---https://mrhalder-portfolio.onrender.com/
 
